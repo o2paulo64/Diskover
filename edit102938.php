@@ -106,7 +106,7 @@
 				</div>	
 
 				<div class="form-group-lg" id="lgsbar">
-					<label for="inputdefault">Other Name(s) <p style="font-size: 10px">Separate other names by (,)</p></label>
+					<label for="inputdefault">Other Name(s) <p style="font-size: 10px">Separate other names by space ( )</p></label>
 					<div class="form-group has-success has-feedback">
 						<input type="text" class="form-control" id="infos" name="otherName" value="<?php echo $other; ?>">
 					</div>

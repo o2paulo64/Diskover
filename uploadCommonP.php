@@ -20,7 +20,7 @@ if(isset($_GET["w1"]) && isset($_GET["w2"]) && isset($_GET["w3"]) && isset($_GET
 
 //$result = pg_query($pg_conn, "INSERT INTO Buildings (buildingName,Directions) VALUES ('$buildingName','$Directions');");
 
-$query = "INSERT INTO CommonP (commonpName, cpDescription, cpDirections,otherName,latitude,longitude,url) VALUES ('".pg_escape_string($commonpName)."','".pg_escape_string($cpDescription)."','".pg_escape_string($cpDirections)."', '".pg_escape_string($cpotherName)."', '".pg_escape_string($latitude)."', '".pg_escape_string($longitude)."', '".pg_escape_string($yuarel)."')";
+$query = "INSERT INTO CommonP (commonpName, cpDescription, cpDirections,otherName,latitude,longitude,url) VALUES ('".pg_escape_string($commonpName)."','".pg_escape_string($cpDescription)."','".pg_escape_string($cpDirections)."', '".pg_escape_string($cpotherName)." ', '".pg_escape_string($latitude)."', '".pg_escape_string($longitude)."', '".pg_escape_string($yuarel)."')";
 $result = pg_query($db, $query);
 header("Location: new_loc_successpage.php");
 ///

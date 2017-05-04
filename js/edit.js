@@ -53,7 +53,7 @@ var myFunctionEDIT = function(){
 		if(trigg===0){
 			result=_url;
 		}
-		if(confirm("Are you sur?")){
+		if(confirm("Are you sure?")){
 			if(fromwhere=="1"){
 				//alert("checking");
 
