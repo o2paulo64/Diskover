@@ -10,11 +10,11 @@
 		while ($row = pg_fetch_row($result)) {$roo=$row[2]; $desc=$row[3]; $dir=$row[4]; $build=$row[1]; $url1=$row[5];
 			$url2=$row[6]; $url3=$row[7];}
 		$result1 = pg_query($db, "SELECT * FROM Buildings WHERE buildingID=".$build.";");
-		while ($rows = pg_fetch_row($result1)) {$lat=$rows[3]; $long=$rows[4]; $picBuild=$rows[5];}
+		while ($rows = pg_fetch_row($result1)) { $bname=$rows[1]; $lat=$rows[3]; $long=$rows[4]; $picBuild=$rows[5];}
+
 	}
 ?>
 			
-
 <div class='container-fluid'>
 	<div class="row">
 		<div class="col-sm-3">
@@ -49,7 +49,10 @@
 		</div>
 
 		<div class="col-sm-2 hidden-md hidden-lg"></div>
-		<div class="col-md-5 col-sm-8">
+		<div class="col-md-5 col-sm-8" style='margin-top: 25px;'>
+			<a href='showbuild.php?name=<?php echo $build; ?>'><?php echo "
+			<button type='submit' class='btn btn-md btn-default' id='backbutton'>  
+			Building: ".$bname."</button></a>"; ?>
 			<div class="panel-group" style='margin-top: 25px;'>
 				<div class="panel panel-default">
 					<div class="panel-heading">
