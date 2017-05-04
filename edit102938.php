@@ -13,14 +13,12 @@
 	$result2 = pg_query($db, "SELECT * FROM CommonP WHERE commonpID=".$id.";");	
 	$result3 = pg_query($db, "SELECT * FROM ComfRoom WHERE crID=".$id.";");	
 	$result4 = pg_query($db, "SELECT * FROM ParkingLot WHERE parkingID=".$id.";");
-	$result5 = pg_query($db, "SELECT * FROM Rooms WHERE roomID=".$id.";");
-
+	
 	$row=pg_fetch_row($result);
 	$row1=pg_fetch_row($result1);
 	$row2=pg_fetch_row($result2);
 	$row3=pg_fetch_row($result3);
 	$row4=pg_fetch_row($result4);
-	$row5=pg_fetch_row($result5);
 
 	if($row[0]!="" && $from=="1"){
 		$result = pg_query($db, "SELECT * FROM Buildings WHERE buildingID=".$id.";");	
@@ -84,16 +82,6 @@
 			$other=$row4[4];
 			$desc=$row4[2];
 			$url=$row4[7];
-		}
-
-	}else if($row5[0]!="" && $from=="6"){
-		$result4 = pg_query($db, "SELECT * FROM Rooms WHERE roomid=".$id.";");
-
-		while ($row4 = pg_fetch_row($result4)) {
-			$name=$row5[2];
-			$direction=$row5[4];
-			$bID=$row5[1];
-			$desc=$row5[3];
 		}
 
 	}

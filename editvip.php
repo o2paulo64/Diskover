@@ -21,6 +21,9 @@
 			$direction=$row5[4];
 			$bID=$row5[1];
 			$desc=$row5[3];
+			$url1=$row5[5];
+			$url2=$row5[6];
+			$url3=$row5[7];
 		}
 
 	}
@@ -35,6 +38,9 @@
 				
 				<input type="hidden" id="from" value="<?php echo $from; ?>"/>
 				<input type="hidden" id="infoD" value="<?php echo $id; ?>"/>
+				<input type="hidden" id="_url1" value="<?php echo $url1; ?>"/>
+				<input type="hidden" id="_url2" value="<?php echo $url2; ?>"/>
+				<input type="hidden" id="_url3" value="<?php echo $url3; ?>"/>
 
 				<div class="form-group-lg" id="lgsbar">
 					<label for="inputdefault">Name</label>

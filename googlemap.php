@@ -1,9 +1,9 @@
 <div id="floating-panel">
-			    <center><b> Mode of Travel:</b>
+			    <center> <h6><b>Mode of Travel:</b>
 			    <select id="mode">
 					<option value="DRIVING">Driving</option>
 					<option value="WALKING">Walking</option>
-			    </select> </center>
+			    </select> </center></h6>
 		    </div>
 		    <div class='img-responsive center-block' id="map" style="width: 480px; height:360px;"></div>
 

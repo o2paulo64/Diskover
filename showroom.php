@@ -44,15 +44,16 @@
 	<div class="row">
 		<div class="col-md-1"></div>
 		<div class="col-md-5">
+			
+			
 			<?php
 		echo "<img class='img-responsive center-block' src='".$picBuild."' width=480px height=360px style='margin-top: 25px;' alt='logo'/>";?>
+		<h4 style="color:#6a090a;"><b><center><?php echo $bname; ?></center></b></h4>
 		</div>
 
 		<div class="col-sm-2 hidden-md hidden-lg"></div>
-		<div class="col-md-5 col-sm-8" style='margin-top: 25px;'>
-			<a href='showbuild.php?name=<?php echo $build; ?>'><?php echo "
-			<button type='submit' class='btn btn-md btn-default' id='backbutton'>  
-			Building: ".$bname."</button></a>"; ?>
+		<div class="col-md-5 col-sm-8">
+			
 			<div class="panel-group" style='margin-top: 25px;'>
 				<div class="panel panel-default">
 					<div class="panel-heading">

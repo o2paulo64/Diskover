@@ -10,6 +10,8 @@ var fileUpload2 = document.getElementById('editfile-upload3');
 var fileSubmit = document.getElementById('new-submit');
 
 var result;
+var result1;
+var result2;
 var trigg = 0;
 
 var namek = document.getElementsByName('buildingName');
@@ -17,7 +19,9 @@ var desc = document.getElementsByName('buildingDescription');
 var direction = document.getElementsByName('Directions');
 var fromwhere=document.getElementById('from').value;
 var id=document.getElementById('infoD').value;
-
+var _url1=document.getElementById('_url1').value;
+var _url2=document.getElementById('_url2').value;
+var _url3=document.getElementById('_url3').value;
 // //alert(fromwhere);
 // //alert(id);
 
@@ -97,8 +101,16 @@ fileUpload2.addEventListener('change', function(event){
 });
 
 var myFunctionEDITROOM = function(){
-	
-	if(trigg===3 && namek[0].value !== "" && desc[0].value !=="" && direction[0].value !== ""){
+	if(namek[0].value !== "" && desc[0].value !=="" && direction[0].value !== ""){
+		if(result===undefined){
+			result=_url1;
+		}
+		if(result1===undefined){
+			result1=_url2;
+		}
+		if(result2===undefined){
+			result2=_url3;
+		}
 		if(confirm("Are you sure?")){
 			if(fromwhere=="6"){
 				//alert("checking");

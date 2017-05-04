@@ -22,7 +22,7 @@ var _url=document.getElementById('_url').value;
 
 // //alert(fromwhere);
 // //alert(id);
-alert("hello");
+
 fileUpload.addEventListener('change', function(event){
 	var file = event.target.files[0];
 	var formData = new FormData();
@@ -45,7 +45,6 @@ fileUpload.addEventListener('change', function(event){
 	}).catch(function(err){
 		console.error(err);
 	});
-	alert(1);
 });
 
 var myFunctionEDIT = function(){
