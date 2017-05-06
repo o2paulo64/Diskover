@@ -22,7 +22,7 @@
 		<div class="col-md-3"></div>
 		<div class="col-md-6" id="overview">
 			<p><strong><i>
-				Diskover is created for people looking for information about places inside the University of
+				Diskover is created for people looking for information about locations inside the University of
 				the Philippines Diliman Campus. Inspired by the idea of the mobile application Lost on Campus,
 				Diskover aims to help by providing necessary information to help you find your way inside the
 				campus.
