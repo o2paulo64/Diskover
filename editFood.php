@@ -15,7 +15,7 @@ if(isset($_GET["w1"]) && isset($_GET["w2"]) && isset($_GET["w3"]) && isset($_GET
 }
 
 
-$query = "UPDATE Eatery SET eateryname='$buildingName', edirections='$Directions', edescription='$buildingDescription', othername='$otherName', latitude='$latitude', longitude='$longitude', url='$yuarel' WHERE eateryid=$id;";
+$query = "UPDATE Eatery SET eateryname=' ".$buildingName." ', edirections='$Directions', edescription='$buildingDescription', othername=' ".$otherName." ', latitude='$latitude', longitude='$longitude', url='$yuarel' WHERE eateryid=$id;";
 $result = pg_query($db, $query);
 header("Location: showfood.php?name=$id");
 

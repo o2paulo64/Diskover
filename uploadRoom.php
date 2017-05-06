@@ -23,7 +23,7 @@ $roomDirections=$_POST['roomDirections'];
 
 //$result = pg_query($pg_conn, "INSERT INTO Buildings (buildingName,Directions) VALUES ('$buildingName','$Directions');");
 
-$query = "INSERT INTO Rooms (buildID, roomName, roomDescription, roomDirections, url1, url2, url3) VALUES ('".pg_escape_string($buildID)."', '".pg_escape_string($roomName)."', '".pg_escape_string($roomDescription)."', '".pg_escape_string($roomDirections)."', '".pg_escape_string($result1)."', '".pg_escape_string($result2)."', '".pg_escape_string($result3)."')";
+$query = "INSERT INTO Rooms (buildID, roomName, roomDescription, roomDirections, url1, url2, url3) VALUES ('".pg_escape_string($buildID)."', ' ".pg_escape_string($roomName)." ', '".pg_escape_string($roomDescription)."', '".pg_escape_string($roomDirections)."', '".pg_escape_string($result1)."', '".pg_escape_string($result2)."', '".pg_escape_string($result3)."')";
 $result = pg_query($db, $query);
 //echo "".$roomName."";
 header("Location: new_loc_successpage.php");

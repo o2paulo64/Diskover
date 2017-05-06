@@ -28,32 +28,27 @@
 					
 
 					$pgsql="SELECT * FROM Buildings WHERE LOWER(buildingName) LIKE LOWER('$search%')
-													OR LOWER(buildingDescription) LIKE LOWER('$search')
-													OR LOWER(otherName) LIKE LOWER('% $search %')
-													OR LOWER(otherName) LIKE LOWER('% $search%')
-													OR LOWER(otherName) LIKE LOWER('%$search %')";
-					$pgsql1="SELECT * FROM Rooms WHERE LOWER(roomName) LIKE LOWER('$search%')
-												 OR  LOWER(roomDescription) LIKE LOWER('$search')";
+													OR LOWER(buildingName) LIKE LOWER('% $search %')
+													OR LOWER(otherName) LIKE LOWER('% $search %')";
+
+
 					$pgsql2="SELECT * FROM Eatery WHERE LOWER(eateryName) LIKE LOWER('$search%')
-												 OR  LOWER(eDescription) LIKE LOWER('$search') 
-												OR LOWER(otherName) LIKE LOWER('% $search %')
-													OR LOWER(otherName) LIKE LOWER('% $search%')
-													OR LOWER(otherName) LIKE LOWER('%$search %')";
+												OR LOWER(eateryName) LIKE LOWER('% $search %')
+												OR LOWER(otherName) LIKE LOWER('% $search %')";
+
 					$pgsql3="SELECT * FROM CommonP WHERE LOWER(commonpName) LIKE LOWER('$search%')
-												 OR  LOWER(cpDescription) LIKE LOWER('$search') 
-												OR LOWER(otherName) LIKE LOWER('% $search %')
-													OR LOWER(otherName) LIKE LOWER('% $search%')
-													OR LOWER(otherName) LIKE LOWER('%$search %')";
+												OR LOWER(commonpName) LIKE LOWER('% $search %')
+												OR LOWER(otherName) LIKE LOWER('% $search %')";
+
 					$pgsql4="SELECT * FROM ComfRoom WHERE LOWER(crName) LIKE LOWER('$search%')
-												 OR  LOWER(crDescription) LIKE LOWER('$search') 
-												 OR LOWER(otherName) LIKE LOWER('% $search %')
-													OR LOWER(otherName) LIKE LOWER('% $search%')
-													OR LOWER(otherName) LIKE LOWER('%$search %')";
+												 OR LOWER(crName) LIKE LOWER('% $search %')
+												 OR LOWER(otherName) LIKE LOWER('% $search %')";
+
 					$pgsql5="SELECT * FROM ParkingLot WHERE LOWER(parkingName) LIKE LOWER('$search%')
-												 OR  LOWER(pDescription) LIKE LOWER('$search') 
-												OR LOWER(otherName) LIKE LOWER('% $search %')
-													OR LOWER(otherName) LIKE LOWER('% $search%')
-													OR LOWER(otherName) LIKE LOWER('%$search %')";
+												OR LOWER(parkingName) LIKE LOWER('% $search %')
+												OR LOWER(otherName) LIKE LOWER('% $search %')";
+
+					$pgsql1="SELECT * FROM Rooms WHERE LOWER(roomName) LIKE LOWER('%$search%')";
 
 					$result=pg_query($db, $pgsql);
 					$result_room=pg_query($db, $pgsql1);
@@ -95,20 +90,6 @@
 								<div class='col-xs-12 col-sm-12 col-md-6'>
 									<h3><a href='showbuild.php?name=".$row[0]."' title=''>".$row[1]."</a></h3>
 									<p>".$row[7]."</p>					
-								</div>
-								
-							</article>
-							";
-						}
-						while($row=pg_fetch_row($result_room)){
-							
-							echo "
-						
-							<article class='search-result row'>
-			
-								<div class='col-xs-12 col-sm-12 col-md-6'>
-									<h3><a href='showroom.php?name=".$row[0]."' title=''>".$row[2]."</a></h3>
-									<p>".$row[3]."</p>					
 								</div>
 								
 							</article>
@@ -171,6 +152,20 @@
 							";
 						}
 					}
+						while($row=pg_fetch_row($result_room)){
+							
+							echo "
+						
+							<article class='search-result row'>
+			
+								<div class='col-xs-12 col-sm-12 col-md-6'>
+									<h3><a href='showroom.php?name=".$row[0]."' title=''>".$row[2]."</a></h3>
+									<p>".$row[3]."</p>					
+								</div>
+								
+							</article>
+							";
+						}
 
 					
 					if($total_result==0){

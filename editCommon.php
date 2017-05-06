@@ -15,7 +15,7 @@ if(isset($_GET["w1"]) && isset($_GET["w2"]) && isset($_GET["w3"]) && isset($_GET
 }
 
 
-$query = "UPDATE CommonP SET commonpname='$buildingName', cpdirections='$Directions', cpdescription='$buildingDescription', othername='$otherName', latitude='$latitude', longitude='$longitude', url='$yuarel' WHERE commonpid=$id;";
+$query = "UPDATE CommonP SET commonpname=' ".$buildingName." ', cpdirections='$Directions', cpdescription='$buildingDescription', othername=' ".$otherName." ', latitude='$latitude', longitude='$longitude', url='$yuarel' WHERE commonpid=$id;";
 $result = pg_query($db, $query);
 header("Location: showcommp.php?name=$id");
 

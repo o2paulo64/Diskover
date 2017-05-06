@@ -15,7 +15,7 @@ if(isset($_GET["w1"]) && isset($_GET["w2"]) && isset($_GET["w3"]) && isset($_GET
 }
 
 
-$query = "UPDATE ComfRoom SET crname='$buildingName', crdirections='$Directions', crdescription='$buildingDescription', othername='$otherName', latitude='$latitude', longitude='$longitude', url='$yuarel' WHERE crid=$id;";
+$query = "UPDATE ComfRoom SET crname=' ".$buildingName." ', crdirections='$Directions', crdescription='$buildingDescription', othername=' ".$otherName." ', latitude='$latitude', longitude='$longitude', url='$yuarel' WHERE crid=$id;";
 $result = pg_query($db, $query);
 header("Location: showcr.php?name=$id");
 
