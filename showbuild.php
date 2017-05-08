@@ -111,36 +111,17 @@
 	<div class='row'>
 		<div class='col-sm-1'></div>
 		<div class='col-sm-5'>
-			<div class='panel-group' id='accordion'>
-				<div class='panel panel-default'>
-					<div class='panel-heading' data-toggle='collapse' data-target='#collapse1'>
-						<h4 class='panel-title'>
-					  		<a class='accordion-toggle'>Rooms</a>
-						</h4>
-				  	</div>
-
-					<div id='collapse1' class='collapse panel-collapse'>
-						<div class='panel-body'>
-							<div class='row'>
-		    					<div class='col-sm-12'>
-									<ul style='margin-right: 30px;'>
-										<form action='showroom.php?' method='GET'>";
+			<div class='list-group'>
+					<div class='list-group-item active' style='background-color: #6a090a; color: white;	'>Choose Room..</div>";
 										
 												$result1 = pg_query($db, 'SELECT * FROM Rooms WHERE buildID='.$name.' ORDER BY roomName;');
 												while ($row1 = pg_fetch_row($result1)) {
 													echo "
-													<button input type='Submit' class='btn btn-sm btn-default' id='roomdsn' name='name' value=".$row1[0]."><a>".$row1[2]."</a></button>";
+													<a href='showroom.php?name=".$row1[0]."' class='list-group-item' id='roomlist'>".$row1[2]."</a>";
 								                }
 										
 											echo "
-										</form>
-									</ul>
-						 		</div> 
-							</div>
-						</div>
-					</div>
-
-				</div>
+						
 			</div>
 
 	   	</div>	

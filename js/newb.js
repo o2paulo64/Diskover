@@ -49,6 +49,6 @@ var myFunction = function(){
 	if(confirm("Are you sure?")){
 	window.location.href = "uploadBuilding.php?w1=" + result + "&w2=" + buildingName[0].value + "&w3=" + otherName[0].value + "&w4=" + buildingDescription[0].value + "&w5=" + Directions[0].value + "&w6="+latitude[0].value+"&w7="+longitude[0].value;}}
 	else{
-		alert("Complete the form before hitting Submit. Check if you have uploaded an image or if it has been uploaded completely.");
+		alert("Complete the form before hitting Submit. Check if you have uploaded ALL image or if it has been uploaded completely.");
 	}
 }

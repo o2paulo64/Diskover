@@ -20,16 +20,15 @@
 <link href="css/style.css" rel="stylesheet" type="text/css">
 <link href="css/style1.css" rel="stylesheet" type="text/css">
 <link href="css/login.css" rel="stylesheet" type="text/css">	
+<link href="css/scrollbar.css" rel="stylesheet" type="text/css">	
 <script src="js/bootstrap.js"></script>
 <script src="js/mh305.js"></script>
 <script src="js/refresh.js"></script>
 
-
 </head>
-
 <body >
 	<?php
-		
+
 		if(isset($_SESSION['id'])){
 			echo "<nav class='navbar navbar-default navbar-static-top'>
 				<div class='container-fluid'>

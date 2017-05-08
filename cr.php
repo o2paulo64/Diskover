@@ -8,28 +8,34 @@
 
 	<div class='container'>
 		<div class='row'>
-			<div class='col-md-12' id='Building-Label'><h1><strong><center>Comfort Rooms</center></strong></h1></div>
+			<div class='col-sm-12' id='Building-Label'><h1><strong><center>Comfort Room</center></strong></h1></div>
 		</div>
-		<div class='row'>
-  			<div class='col-md-4'></div>
-	  		<div class='col-md-4' id='selectoption'>
-				<div class='form-group'>
-					<form method='GET' action='showcr.php'>
-					<select name = 'name' class = 'form-control' id = 'sell' class='form-control' onchange='this.form.submit()'>
-						<option>Choose Comfort Room..</option>
+		<div class='row' style="margin-top: 20px;">
+			<div class="col-md-6">
+				<a href="#"><img class="img-responsive center-block" src="images/UP_CR.png" alt="logo"/></a>
 
-<?php					
+			</div>
+			<div class="col-md-6">
+				<div class="list-group">
+					<div class="list-group-item active" style="background-color: #6a090a; color: white;	">Choose Comfort Room..</div>
+				
+<?php			
+
+	if (pg_num_rows($result)>11){
+		echo "<div class='scrollbar' id='style-default'>
+				    <div class='force-overflow'>";
+	}
 	while ($row = pg_fetch_row($result)) {
-	    echo "<option value=".$row[0].">".$row[1]."</option>";    
-	}	
-?>
 
-						</optgroup>
-					</select>
-					</form>
-				</div>
-       		</div>
-        </div>
+	    echo "<a href='showcr.php?name=".$row[0]."' class='list-group-item'>".$row[1]."</a>";    
+	}	
+	if (pg_num_rows($result)>11){
+		echo "</div></div>";
+    }
+?>
+      			</div>
+    		</div>
+		</div>
 	</div>
 </body>
 </html>

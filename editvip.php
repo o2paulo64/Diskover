@@ -52,16 +52,12 @@
 
 				<div class="form-group">
 					<label for="comment">Description</label>
-					<textarea class="form-control" rows="5" id="comment" name="buildingDescription" v>
-						<?php echo $desc; ?>
-					</textarea>
+					<textarea class="form-control" rows="5" id="comment" name="buildingDescription" v><?php echo $desc; ?></textarea>
 				</div>
 
 				<div class="form-group">
 					<label for="comment">Location</label>
-					<textarea class="form-control" rows="5" id="comment" name="Directions" >
-						<?php echo $direction; ?>
-					</textarea>
+					<textarea class="form-control" rows="5" id="comment" name="Directions" ><?php echo $direction; ?></textarea>
 				</div>
 
 			</div>

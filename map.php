@@ -26,7 +26,7 @@
 			  <img src="images/katip.png" style='height: 30px; width: 30px;' />
 			  <img src="images/philcoa.png" style='height: 30px; width: 30px;' />
 			  to and from UP Diliman. 
-			  Simply click <img src="images/options.png" style='height: 30px; width: 30px;' />  to see more options.</b></p>
+			  <br><br>Simply click <img src="images/options.png" style='height: 30px; width: 30px;' />  to see more options.</b></p>
 		</div>
 	</div>
 </div>

@@ -35,7 +35,16 @@ h2 a:link, a:visited, a:hover, a:active{ /*remove link on images*/
   margin-top: 50px;
 }
 
+#roomlist:hover {
+  background-color: lightgrey;
 
+}
+
+
+#roomlist {
+  background-color: #D5C3C3;
+
+}
 .col-md-2 {
 		
 	padding-bottom: 25px;

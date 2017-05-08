@@ -107,6 +107,6 @@ var myFunctionr = function(){
 	if(confirm("Are you sure?")){
 	window.location.href = "uploadRoom.php?w1=" + result1 + "&w2=" + roomName[0].value + "&w3=" + result2 + "&w4=" + roomDescription[0].value + "&w5=" + roomDirections[0].value + "&w6=" + result3 + "&w7=" + buildID[0].value;}}
 	else{
-		alert("Complete the form before hitting Submit. Check if you have uploaded an image or if it has been uploaded completely.");
+		alert("Complete the form before hitting Submit. Check if you have uploaded ALL image or if it has been uploaded completely.");
 	}
 }
